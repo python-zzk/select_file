@@ -1,5 +1,6 @@
 import os
 from collections import Counter
+import time
 
 
 class Select_file:
@@ -33,13 +34,18 @@ class Select_file:
         print(self.count)
         for file in files:
             if file.endswith(self.file_name):
-                self.remove_files()
+                pass
             else:
                 if os.path.exists(file):
+                    print(file)
                     os.remove(file)
                 else:
-                    self.remove_files()
+                    pass
+        for i in range(0, 10):
+            self.remove_files()
+        print("清洗完成")
 
 
 if __name__ == '__main__':
-    a = Select_file("/home/dysec/文件/123/exploitdb-master/exploits", ".rb").rm_file()
+    a = Select_file("/home/dysec/文件/embedded", ".rb").remove_files()
+
