@@ -47,5 +47,5 @@ class Select_file:
 
 
 if __name__ == '__main__':
-    a = Select_file("/home/dysec/文件", ".rb").remove_files()
+    a = Select_file("path", ".rb").remove_files()
 
